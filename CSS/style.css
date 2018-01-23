@@ -1,0 +1,45 @@
+body
+{
+    background-color: ghostwhite;
+}
+
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.wrapper
+{
+    margin: 3% auto;
+    float: none;
+}
+
+.input-group
+{
+    margin-bottom: 5%;
+}
+
+.form-check
+{
+    margin-bottom: 10%;
+}
+
+.panel
+{
+    background-color: ghostwhite;
+    margin-top: 10%;
+}
+
+.panel-heading
+{
+    font-size: 25px;
+    color: maroon;
+    text-align: center;
+}
+
+.buttons
+{   
+    margin-top: 7%;
+}
