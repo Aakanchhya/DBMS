@@ -25,9 +25,10 @@
       <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav">
         <li> <a href="index.php"> <span class="glyphicon glyphicon-home"> </span> </a> </li>
-        <li> <a href="#"> Menu 1 </a> </li>
-        <li> <a href="#"> Menu 2 </a> </li>
-        <li> <a href="#"> Menu 3 </a> </li>
+        <li> <a href="#"> Books </a> </li>
+        <li> <a href="#"> Gallery </a> </li>
+        <li> <a href="#"> About </a> </li>
+        <li> <a href="#"> Contact </a> </li>
     </ul>
       <ul class="nav navbar-nav navbar-right">
       <li > <a href="register.php"> <span class="glyphicon glyphicon-user"> </span>  Sign Up  </a> </li>
