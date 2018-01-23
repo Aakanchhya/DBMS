@@ -109,7 +109,7 @@
         </tbody>
     </table>
         
-        <a href='add.php'.php?table=<?php echo $table ?>' role='button' class='btn btn-primary'> Add Data </a>
+        <a href='add.php'.php?table=<?php echo $table ?> role='button' class='btn btn-primary'> Add Data </a>
         
     </div>
     </div>

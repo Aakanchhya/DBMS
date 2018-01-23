@@ -47,7 +47,7 @@
     </div>
     <div class='container'>
         <div class='wrapper'>
-            <form method='get' action='insert.php?table=<?php echo $table ?>'>
+            <form method='post' action='insert.php'>
                 <table class='table table-bordered table-hover table-responsive'>
                     
                     <thead>
@@ -69,7 +69,6 @@
                         <!-- Loading table content -->
                         <?PHP 
                             
-                            $count = 0;
                             foreach ($row as $value) 
                             {
                                 echo "<td> <input class='form-control' name='".$value."'  /></td>";
