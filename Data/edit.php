@@ -52,7 +52,7 @@
     </div>
     <div class='container'>
         <div class='wrapper'>
-            <form>
+            <form method='post' action='update.php'>
                 <table class='table table-bordered table-hover table-responsive'>
                     <caption> Book Table </caption>
                     <thead>
@@ -71,14 +71,23 @@
                         <tr>
                         <!-- Loading table content -->
                         <?PHP 
+                            $count = 0;
                             foreach ($row as $key => $value) {
-                                echo "<td> <input class='form-control' value='".$value."'/></td>";
+                                if($count ==0)
+                                    $read = 'readonly'; 
+                                else 
+                                   $read = '';
+                                $count ++;
+                     
+                                echo "<td> <input class='form-control' value='".$value." '   ".$read." name='".$key."'  /></td>";
                             }
-                               
+                                                           
                            ?>
                         </tr>
                     </tbody>
                 </table>
+                <input name='table' value='<?php echo $table?>' hidden/>
+                <button type="submit" class="btn btn-success">Save Changes</button>
             </form>
         </div>
     </div>
