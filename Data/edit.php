@@ -22,8 +22,10 @@
                     $query = "Select * from members where Mid = $id";    
                 break;
             }
+            
             //getting data
             $run_sql = mysqli_query($con,$query) or die(mysqli_error($con));
+            
             //checking if there is data
             if(mysqli_num_rows($run_sql) ) {
                 $row = mysqli_fetch_assoc($run_sql);

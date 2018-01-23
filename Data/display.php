@@ -14,15 +14,15 @@
             {
                 case 1:
                     $query = "Select * from Book";
-                    $table = "Book";
+                    $tableName = "Book";
                     break;
                 case 2:
                     $query = "Select * from Author";
-                    $table = "Author";
+                    $tableName = "Author";
                     break;
                 case 3:
                     $query = "Select * from Members";
-                    $table = "Member";
+                    $tableName = "Member";
                     break;
             }
             $run_sql = mysqli_query($con,$query);
@@ -56,18 +56,24 @@
     <div class='container'>
     <div class='wrapper'>
         <table class='table table-bordered table-hover table-responsive'>
-        <caption><?php echo $table ?> Table </caption>
+        <caption><?php echo $tableName ?> Table </caption>
             <thead>
                 <tr>
                     <?PHP 
+                        $count = 0;
                                
                         foreach ($row as $key => $value) 
                         {
-                            echo "<td>".$key."</td>";
+                            echo "<th>".$key."</th>";
+                            if($count == 0)
+                            {
+                                $tid = $key;
+                            }
+                            $count ++;
                         }
                                 
                     ?>
-                    <td> Action </td>
+                    <th> Action </th>
                 </tr>
             </thead>
             <tbody>
@@ -78,7 +84,7 @@
                     {
                         if(mysqli_num_rows($run_sql) != false) 
                         {
-                            while($row = mysqli_fetch_assoc($run_sql)) 
+                            do 
                             {
                                 echo "<tr>";
                                 foreach($row as $val) 
@@ -88,13 +94,13 @@
                                                                 
                                 echo "<td>";
                                 
-                                echo "<a href='edit.php?id=".$row["Bid"]."&table=1 'role='button' class='btn btn-info'> Edit  </a>";
-                                echo "<a href='delete.php?id=".$row["Bid"]."table=1 'role='button' class='btn btn-danger'> Delete  </a>";
+                                echo "<a href='edit.php?id=".$row[$tid]."&table=".$table." 'role='button' class='btn btn-info'> Edit  </a>";
+                                echo "<a href='delete.php?id=".$row[$tid]."table=".$table."'role='button' class='btn btn-danger'> Delete  </a>";
                                     
                                 echo "</div>
                                 </td>
                                 </tr>";
-                            }
+                            }while($row = mysqli_fetch_assoc($run_sql));
                         }
                     }
                             
