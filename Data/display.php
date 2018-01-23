@@ -8,6 +8,7 @@
         //......For Displaying Book Table......//
         if(isset($_GET['table']))
         {
+           
             $table = $_GET['table'];
             
             switch($table)
@@ -39,6 +40,7 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
     <title> Home </title>
     <link rel='import' href='../bootstrap.html'>
@@ -46,39 +48,49 @@
 </head>
 
 <body>
-          
-    <?PHP include('Nav.php');?>          
+
+    <?PHP include('Nav.php');?>
     <!-- Buttons -->
     <div class='button'>
-    <a href='table.php' role='button' class='btn btn-primary'> <span class='glyphicon glyphicon-chevron-left'></span></a>
+        <a href='table.php' role='button' class='btn btn-primary'>
+            <span class='glyphicon glyphicon-chevron-left'></span>
+        </a>
     </div>
-                    
+
     <div class='container'>
-    <div class='wrapper'>
-        <table class='table table-bordered table-hover table-responsive'>
-        <caption><?php echo $tableName ?> Table </caption>
-            <thead>
-                <tr>
-                    <?PHP 
+        <div class='wrapper'>
+            <table class='table table-bordered table-hover table-responsive'>
+                <caption>
+                    <?php echo $tableName ?> Table </caption>
+                <thead>
+                    <tr>
+                        <?PHP 
                         $count = 0;
-                               
-                        foreach ($row as $key => $value) 
-                        {
-                            echo "<th>".$key."</th>";
-                            if($count == 0)
+                        if($run_sql) 
+                         {
+                            if(mysqli_num_rows($run_sql) != false) 
                             {
-                                $tid = $key;
+                                foreach ($row as $key => $value) 
+                                 {
+                                    echo "<th>".$key."</th>";
+                                if($count == 0)
+                                {
+                                    $tid = $key;
+                                }
+                                $count ++;
+                             }
+                    
                             }
-                            $count ++;
                         }
+                    
                                 
                     ?>
-                    <th> Action </th>
-                </tr>
-            </thead>
-            <tbody>
-                    
-                <?php
+                        <th> Action </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <?php
                
                     if($run_sql) 
                     {
@@ -106,13 +118,14 @@
                             
                 ?>
 
-        </tbody>
-    </table>
-        
-        <a href='add.php?table=<?php echo $table ?> 'role='button' class='btn btn-primary'> Add Data </a>
-        
+                </tbody>
+            </table>
+
+            <a href='add.php?table=<?php echo $table ?> ' role='button' class='btn btn-primary'> Add Data </a>
+
+        </div>
     </div>
-    </div>
-    
+
 </body>
+
 </html>
