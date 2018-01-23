@@ -46,7 +46,7 @@
     <?PHP include('Nav.php');?>
     <!-- Buttons -->
     <div class='button'>
-        <a href='table.php' role='button' class='btn btn-primary'>
+        <a href='display.php?table=<?php echo $table ?>' role='button' class='btn btn-primary'>
             <span class='glyphicon glyphicon-chevron-left'></span>
         </a>
     </div>
@@ -54,7 +54,7 @@
         <div class='wrapper'>
             <form method='post' action='update.php'>
                 <table class='table table-bordered table-hover table-responsive'>
-                    <caption> Book Table </caption>
+                    
                     <thead>
                         <tr>
                             <!-- Loading table head -->
