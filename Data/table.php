@@ -22,15 +22,15 @@
     <?php include('Nav.php'); ?>
     <!-- Buttons -->
     <div class="buttons">
-        <a href="display.php?book=1" role="button" class="btn btn-primary"> Books <span class="glyphicon glyphicon-chevron-right"></span> </a>
+        <a href="display.php?table=1" role="button" class="btn btn-primary"> Books <span class="glyphicon glyphicon-chevron-right"></span> </a>
     </div>
     
     <div class="buttons">
-    <a href="display.php?author=1" role="button" class="btn btn-primary"> Authors <span class="glyphicon glyphicon-chevron-right"></span> </a>
+    <a href="display.php?table=2" role="button" class="btn btn-primary"> Authors <span class="glyphicon glyphicon-chevron-right"></span> </a>
     </div>
     
     <div class="buttons">
-    <a href="display.php?member=1" role="button" class="btn btn-primary"> Members <span class="glyphicon glyphicon-chevron-right"></span> </a>
+    <a href="display.php?table=3" role="button" class="btn btn-primary"> Members <span class="glyphicon glyphicon-chevron-right"></span> </a>
     </div>
     
 </html>
