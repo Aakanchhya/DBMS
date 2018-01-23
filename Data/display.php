@@ -136,8 +136,8 @@
                                         
                                         echo "<td >
                                 
-                                    <a href='edit.php?id=".$row["Aid"]."table=2 'role='button' class='btn btn-info'> Edit  </a>
-                                    <a href='delete.php?id=".$row["Aid"]."table=2 'role='button' class='btn btn-danger'> Delete  </a>
+                                    <a href='edit.php?id=".$row["Aid"]."&table=2 'role='button' class='btn btn-info'> Edit  </a>
+                                    <a href='delete.php?id=".$row["Aid"]."&table=2 'role='button' class='btn btn-danger'> Delete  </a>
                                     
                                         </div>
                                         </td>";
@@ -215,8 +215,8 @@
                                         
                                         echo "<td >
                                 
-                                    <a href='edit.php?id=".$row["Mid"]."table=3 'role='button' class='btn btn-info'> Edit  </a>
-                                    <a href='delete.php?id=".$row["Mid"]."table=3 'role='button' class='btn btn-danger'> Delete  </a>
+                                    <a href='edit.php?id=".$row["Mid"]."&table=3 'role='button' class='btn btn-info'> Edit  </a>
+                                    <a href='delete.php?id=".$row["Mid"]."&table=3 'role='button' class='btn btn-danger'> Delete  </a>
                                     
                                     </div>
                                     </td>";
