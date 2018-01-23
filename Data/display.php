@@ -11,7 +11,8 @@
             if($_GET['book'] == 1)
             {
                 include('Nav.php');
-                echo "<!DOCTYPE html>
+                echo "
+                <!DOCTYPE html>
 
                 <head>
                     <title> Home </title>
@@ -19,9 +20,8 @@
                     <link rel='stylesheet' href='../CSS/style.css'>
                 </head>
 
-                <html>
-
-                    <?php include('Nav.php'); ?>
+                    <body>
+                    
                     <!-- Buttons -->
                     <div class='button'>
                         <a href='table.php' role='button' class='btn btn-primary'> <span class='glyphicon glyphicon-chevron-left'></span></a>
@@ -57,10 +57,11 @@
                                         {
                                             echo "<td>".$val."</td>";
                                         }
-                                echo "<td >
+                                                                
+                                    echo "<td >
                                 
-                                    <a href='action.php?.$row["Bid""]'. role='button' class='btn btn-info'> Edit  </a>
-                                    <a href='action.php?delete=1' role='button' class='btn btn-danger'> Delete  </a>
+                                    <a href='edit.php?id=".$row["Bid"]."&table=1 'role='button' class='btn btn-info'> Edit  </a>
+                                    <a href='delete.php?id=".$row["Bid"]."table=1 'role='button' class='btn btn-danger'> Delete  </a>
                                     
                                 </div>
                                 </td>";
@@ -77,6 +78,7 @@
         </table>
     </div>
 
+                </body>
                 </html>";
             }
         }
@@ -97,9 +99,8 @@
                     <link rel='stylesheet' href='../CSS/style.css'>
                 </head>
 
-                <html>
+                <body>
 
-                    <?php include('Nav.php'); ?>
                     <!-- Buttons -->
                     <div class='button'>
                         <a href='table.php' role='button' class='btn btn-primary'> <span class='glyphicon glyphicon-chevron-left'></span></a>
@@ -132,6 +133,15 @@
                                         {
                                             echo "<td>".$val."</td>";
                                         }
+                                        
+                                        echo "<td >
+                                
+                                    <a href='edit.php?id=".$row["Aid"]."table=2 'role='button' class='btn btn-info'> Edit  </a>
+                                    <a href='delete.php?id=".$row["Aid"]."table=2 'role='button' class='btn btn-danger'> Delete  </a>
+                                    
+                                        </div>
+                                        </td>";
+                                        
                                         echo "</tr>";
                                     }
                                 }
@@ -145,6 +155,7 @@
         </table>
     </div>
 
+                </body>
                 </html>";
             }
         }
@@ -165,9 +176,8 @@
                     <link rel='stylesheet' href='../CSS/style.css'>
                 </head>
 
-                <html>
+                <body>
 
-                    <?php include('Nav.php'); ?>
                     <!-- Buttons -->
                     <div class='button'>
                         <a href='table.php' role='button' class='btn btn-primary'> <span class='glyphicon glyphicon-chevron-left'></span></a>
@@ -202,6 +212,15 @@
                                         {
                                             echo "<td>".$val."</td>";
                                         }
+                                        
+                                        echo "<td >
+                                
+                                    <a href='edit.php?id=".$row["Mid"]."table=3 'role='button' class='btn btn-info'> Edit  </a>
+                                    <a href='delete.php?id=".$row["Mid"]."table=3 'role='button' class='btn btn-danger'> Delete  </a>
+                                    
+                                    </div>
+                                    </td>";
+
                                         echo "</tr>";
                                     }
                                 }
@@ -215,6 +234,7 @@
                     </table>
                 </div>
 
+                </body>
                 </html>";
             }
         }
