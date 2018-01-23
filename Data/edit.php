@@ -11,7 +11,8 @@
             //id
             $id = $_GET["id"];
             //choosing table
-            switch($table) {
+            switch($table) 
+            {
                 case  1:
                     $query = "Select * from book where Bid = $id";    
                 break;
@@ -27,7 +28,8 @@
             $run_sql = mysqli_query($con,$query) or die(mysqli_error($con));
             
             //checking if there is data
-            if(mysqli_num_rows($run_sql) ) {
+            if(mysqli_num_rows($run_sql) ) 
+            {
                 $row = mysqli_fetch_assoc($run_sql);
             }                   
         }
