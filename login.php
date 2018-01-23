@@ -1,3 +1,10 @@
+<?php session_start();
+    if(isset($_SESSION['name']))
+    {
+        header('location:Data/table.php');
+    }
+?>
+
 <html>
 <head>
 <title> Login Page </title>

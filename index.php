@@ -1,3 +1,10 @@
+<?php session_start();
+    if(isset($_SESSION['name']))
+    {
+        header('location:Data/table.php');
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <head> 

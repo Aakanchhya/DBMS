@@ -4,7 +4,7 @@
     <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header"> 
-      <a class="navbar-brand" href="#"> User Panel </a>
+      <a class="navbar-brand" href="#"> Admin Panel </a>
           <button type="button" class="navbar-toggle glyphicon glyphicon-menu-hamburger" data-toggle="collapse" data-target="#myNavbar">
                 
             </button>
